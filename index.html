@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Giochi - Scegli il tuo gioco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Centro Giochi</h1>
+            <p>Scegli il tuo gioco preferito dal menu sottostante</p>
+        </header>
+
+        <!-- Menu principale -->
+        <div id="main-menu" class="menu-container">
+            <div class="game-grid">
+                <div class="game-card" onclick="selectGame('hanoi')">
+                    <div class="game-icon">🗼</div>
+                    <h3>Torre di Hanoi</h3>
+                    <p>Risolvi il classico puzzle della Torre di Hanoi</p>
+                </div>
+                
+                <div class="game-card" onclick="selectGame('minesweeper')">
+                    <div class="game-icon">💣</div>
+                    <h3>Prato Fiorito</h3>
+                    <p>Trova tutte le mine nascoste nel campo</p>
+                </div>
+                
+                <div class="game-card" onclick="selectGame('snake')">
+                    <div class="game-icon">🐍</div>
+                    <h3>Snake</h3>
+                    <p>Controlla il serpente e mangia il cibo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container per i giochi -->
+        <div id="game-container" class="game-container hidden">
+            <div class="game-header">
+                <button id="back-btn" onclick="backToMenu()">← Torna al Menu</button>
+                <h2 id="game-title"></h2>
+            </div>
+            <div id="game-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
